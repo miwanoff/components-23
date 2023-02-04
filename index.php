@@ -31,11 +31,15 @@
                 <!-- Блок новостей -->
                 <h2>Последние новости:</h2>
                 <?php include "component_news_show.php";?>
+
+                <!-- <?php print_r($Data); ?> -->
                 <ul>
                     <?php foreach ($Data as $i => $n) {?>
                     <li>
                         <?=$i + 1;?>-я новость:
-                        <?=$n;?></li>
+                        <!-- <?php print_r($n);?> -->
+                        <?=$n["name"]." ".$n["text"];?>
+                    </li>
                     <?php }?>
                 </ul>
     </body>
